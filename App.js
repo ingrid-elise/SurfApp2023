@@ -1,22 +1,40 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
+import LoginPage from "./pages/LoginPage";
+import HomeScreen from "./pages/HomeScreen";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+// import { Weather } from "@teamkeel/sdk";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Text>Open up App.js to start working on your app!</Text>
-
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <NavigationContainer style={styles.container}>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Login Page"
+            component={LoginPage}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Home Screen"
+            component={HomeScreen}
+            options={{ headerShown: true }}
+          />
+        </Stack.Navigator>
+        {/* <StatusBar style="auto" /> */}
+      </NavigationContainer>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    // backgroundColor: "white",
+    // alignItems: "center",
+    // justifyContent: "center",
   },
 });

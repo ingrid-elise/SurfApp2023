@@ -1,0 +1,20 @@
+model UserLoginInfo {
+    fields {
+        userLogin Text
+        userPassword Text
+    }
+}
+
+model Weather {
+    fields {
+        temperature Number
+        waveHeight Number
+        waveDirection Text
+    }
+}
+
+api Web {
+    models {
+        UserLoginInfo
+    }
+}
