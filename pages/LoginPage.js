@@ -8,8 +8,6 @@ import {
 } from "react-native";
 import { useForm, Controller } from "react-hook-form";
 import { HomeScreen } from "./HomeScreen";
-// import { NavigationContainer } from "@react-navigation/native";
-// import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const LoginPage = ({ navigation }) => {
   const {

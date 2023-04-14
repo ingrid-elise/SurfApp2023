@@ -1,7 +1,7 @@
-model UserLoginInfo {
+model Account {
     fields {
-        userLogin Text
-        userPassword Text
+        user Identity
+        location Text
     }
 }
 
@@ -15,6 +15,6 @@ model Weather {
 
 api Web {
     models {
-        UserLoginInfo
+        Account
     }
 }
